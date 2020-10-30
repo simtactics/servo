@@ -7,8 +7,8 @@ namespace Servo.MotiveEngine
         const int NAX_MOOD = 600;
         const int MAX_MOTIVE = 100;
 
-        public Motives(int hunger, int bladder, int fun, int energy,
-            int environment, int social)
+        public Motives(int hunger, int bladder, int fun,
+            int energy, int environment, int social)
         {
             Hunger = hunger;
             Bladder = bladder;
