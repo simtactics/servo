@@ -2,7 +2,15 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)
 
-Servo is a experimental re-implementation of SimAntics using ML.NET based on [Under the Hood of The Sims](https://users.cs.northwestern.edu/~forbus/c95-gd/lectures/The_Sims_Under_the_Hood_files/v3_document.htm). I have wanted to write my own version of SimAntics for a while but the process of rewriting the engine from scratch or even maintaining an existing re-implementation, such as FreeSO's, has proven to be tedious. Current machine learning technologies, such as ML.NET, can streamline the process. That being said, Servo is not intended to be used to rewrite The Sims itself. The models are intended for building new games based on it's design.
+Servo is a experimental project into using current machine learning technologies, such as ML.NET, to re-implementing SimAntics-like AI. While [current re-implementations](https://github.com/riperiperi/FreeSO) exist, maintaining that code independently of the project has proven to be tedious and exhausting because it has to much ties to the game engine it was build around of. Servo is meant to be a fresh and clean design with the only relation to Sims coming from public [design documents](https://users.cs.northwestern.edu/~forbus/c95-gd/lectures/The_Sims_Under_the_Hood_files/v3_document.htm).
+
+## Requirements
+
+### Prerequisites
+
+- .NET Core 3.1 or later
+- Visual Studio Code Insiders
+  - .NET Interactive Notebooks
 
 ## Design
 
@@ -16,15 +24,12 @@ A Sim's motives decrease in increments and independently of each other during ga
 
 The actual decision making is handled by ML.NET's recommendation algorithms based on Action, Need, and Threshold where Threshold is the "Rating", Need is the "User" and Action is the "Item". For example:
 
-| Action       | Need   | Threshold |
-| ------------ | ------ | --------- |
-| Refrigerator | Hunger | 30        |
-| Refrigerator | Hunger | 28        |
-| Refrigerator | Hunger | 24        |
-| Refrigerator | Hunger | 21        |
-| Refrigerator | Hunger | 20        |
+| Action       | Need   | Min | Max |
+| ------------ | ------ | --- | --- |
+| Refrigerator | Hunger | 10  | 30  |
+| Toy          | Fun    | 60  | 70  |
 
-The decision engine keeps an eye on the motives and the queue. However, In Under the Hood of The Sims says that the final decision is based on whether the fridge increases the current mood as a whole, not the hunger motive.
+The decision engine keeps an eye on the motives and the queue. The threshold is how the low the motive has to be in order for a Sim to use an object. Just like in The Sims, this can be tuned afterwards. However, In Under the Hood of The Sims says that the final decision is based on whether the fridge increases the current mood as a whole, not the hunger motive.
 
 Current dataset design is NOT FINAL.
 
