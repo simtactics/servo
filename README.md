@@ -6,11 +6,12 @@ Servo is a experimental project into using current machine learning technologies
 
 ## Requirements
 
-### Prerequisites
+## Prerequisites
 
-- .NET Core 3.1 or later
-- Visual Studio Code Insiders
-  - .NET Interactive Notebooks
+- [.NET](https://dotnet.microsoft.com/download) 5+ or Core 3.1
+- [.NET Interactive](https://github.com/dotnet/interactive/blob/main/README.md)
+    - [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) (does not require Jupyter)
+    - [nteract](https://nteract.io/) (requires Jupyter)
 
 ## Design
 
