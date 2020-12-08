@@ -1,8 +1,8 @@
 # Servo
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/simtactics/servo/HEAD?urlpath=lab) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)
 
-Servo is a experimental project into using current machine learning technologies, such as ML.NET, to re-implementing SimAntics-like AI. While [current re-implementations](https://github.com/riperiperi/FreeSO) exist, maintaining that code independently of the project has proven to be tedious and exhausting because it has to much ties to the game engine it was build around of. Servo is meant to be a fresh and clean design with the only relation to Sims coming from public [design documents](https://users.cs.northwestern.edu/~forbus/c95-gd/lectures/The_Sims_Under_the_Hood_files/v3_document.htm).
+Servo is a experimental re-imagining of SimAntics using ML.NET with Jupyter Notebooks. While [current re-implementations](https://github.com/riperiperi/FreeSO) exist, maintaining that code independently of the project has proven to be tedious and exhausting because it has to much ties to the game engine it was build around of. Servo is meant to be a fresh and clean design with the only relation to Sims coming from public [design documents](https://users.cs.northwestern.edu/~forbus/c95-gd/lectures/The_Sims_Under_the_Hood_files/v3_document.htm).
 
 ## Requirements
 
@@ -36,4 +36,4 @@ Current dataset design is NOT FINAL.
 
 ## License
 
-I license the source code for this project under the GNU GPL v3, see [LICENSE](LICENSE), and data sets under the Open Database License, see [DATA-LICENSE](DATA-LICENSE).
+I license the source code for this project under the Apache 2.0, see [LICENSE](LICENSE), and data sets under the Open Database License, see [DATA-LICENSE](DATA-LICENSE).
