@@ -2,22 +2,19 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/simtactics/servo/HEAD?urlpath=lab) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)
 
-Servo is a experimental re-imagining of SimAntics using ML.NET with Jupyter Notebooks. While [current re-implementations](https://github.com/riperiperi/FreeSO) exist, maintaining that code independently of the project has proven to be tedious and exhausting because it has to much ties to the game engine it was build around of. Servo is meant to be a fresh and clean design with the only relation to Sims coming from public [design documents](https://users.cs.northwestern.edu/~forbus/c95-gd/lectures/The_Sims_Under_the_Hood_files/v3_document.htm).
-
 ## Requirements
 
-## Prerequisites
+### Prerequisites
 
-- [.NET](https://dotnet.microsoft.com/download) 5+ or Core 3.1
-- [.NET Interactive](https://github.com/dotnet/interactive/blob/main/README.md)
-    - [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) (does not require Jupyter)
-    - [nteract](https://nteract.io/) (requires Jupyter)
+- [.NET](https://dotnet.microsoft.com/download) (LTS recommended)
+- [.NET Interactive](https://github.com/dotnet/interactive?tab=readme-ov-file)
+- [JupyterLab](https://jupyter.org/install)
 
 ## Design
 
 ### Motive Engine
 
-The Motive Engine is based on opposing weights. An object signals it's presence if the Sim's need is low. The need is the motive and that drives a Sims' decision. All games in the franchise are based on this dynamic at it's core. For example, if hunger is low then the fridge's presence is high and vice versa. A Sim's mood is the sum of the current state of their motives. They will only choose the fridge if it increases it's overall mood. The ML portion comes in deciding which has the priority.
+The Motive Engine is based on opposing weights. An object signals its presence if the Sim's need is low. The need is the motive and that drives a Sims' decision. All games in the franchise are based on this dynamic at it's core. For example, if hunger is low then the fridge's presence is high and vice versa. A Sim's mood is the sum of the current state of their motives. They will only choose the fridge if it increases it's overall mood.
 
 A Sim's motives decrease in increments and independently of each other during game play. They are randomized for this experiment.
 
